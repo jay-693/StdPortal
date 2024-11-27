@@ -1,0 +1,6 @@
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\bin\Debug\ORM.exe
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\bin\Debug\ORM.pdb
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\obj\Debug\ORM.csproj.AssemblyReference.cache
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\obj\Debug\ORM.csproj.CoreCompileInputs.cache
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\obj\Debug\ORM.exe
+C:\Users\Vijay Vattikuti\source\repos\ORM\ORM\obj\Debug\ORM.pdb
