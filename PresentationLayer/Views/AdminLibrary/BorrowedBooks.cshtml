@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section BorrowBooks {
+    <div class="holiday-wrapper">
+        <h1>Borrowed Books</h1>
+        <p class="bread">You are here: <a asp-controller="Home" asp-action="LandingPage" style="text-decoration:none;color:#E437D2">Library</a> >> Borrowed Books</p>
+        <a class="btn btn-success" asp-action="Add" style="text-decoration:none;color:darkorange">Add Book</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>StudentId</th>
+                    <th>Sno</th>
+                    <th>Book Name</th>
+                    <th>Borrowed Date</th>
+                    <th>Return Date</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.StudentId</td>
+                        <td>@book.Sno</td>
+                        <td>@book.BookName</td>
+                        <td>@book.BorrowedDate.ToString("yyyy-MM-dd")</td>
+                        <td>@book.ReturnDate.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <a class="btn btn-primary" style="text-decoration:none;color:darkorange" asp-action="Edit" asp-route-id="@book.Id">Edit</a>
+                            <a class="btn btn-danger" style="text-decoration:none;color:darkorange" asp-action="Remove" asp-route-id="@book.Id">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+
+        <!-- Pagination Links -->
+        <div class="pagination" style="float:right; display:flex; gap:10px;">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("BorrowedBooks", new { pageNumber = ViewBag.CurrentPage - 1 })"
+                   class="btn btn-secondary pagination-btn pagination-arrow">
+                    &lt; <!-- Left Arrow ( < ) -->
+                </a>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="@Url.Action("BorrowedBooks", new { pageNumber = i })"
+                   class="btn btn-primary pagination-btn @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("BorrowedBooks", new { pageNumber = ViewBag.CurrentPage + 1 })"
+                   class="btn btn-secondary pagination-btn pagination-arrow">
+                    &gt; <!-- Right Arrow ( > ) -->
+                </a>
+            }
+        </div>
+        <br />
+    </div>
+}

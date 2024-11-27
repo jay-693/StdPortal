@@ -1,0 +1,12 @@
+﻿@{
+    var username=ViewContext.HttpContext.Session.GetString("Username");
+}
+
+@if (ViewBag.Username != null)
+{
+    @ViewBag.Username;
+}
+else
+{
+    @username;
+}

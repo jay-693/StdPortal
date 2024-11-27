@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model StudentPortal.Models.Holiday
+
+@section addholiday {
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left; /* Ensure form labels are left-aligned */
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-left: -8px;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+                outline: none;
+            }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+            width: 120px;
+            padding: 10px;
+            font-size: 16px;
+            margin-left:70px;
+        }
+
+            .btn-success:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+            }
+    </style>
+
+    <!-- Wrapping the heading and form inside a container for alignment -->
+    <div class="form-container">
+        <h2>Add Holiday</h2>
+
+        <form asp-controller="AcademicAdmin" asp-action="AddHoliday" method="post">
+            <div class="form-group">
+                <label>Month</label>
+                <input type="text" asp-for="Month" class="form-control" placeholder="Enter Month" required />
+            </div>
+
+            <div class="form-group">
+                <label>Date</label>
+                <input type="number" asp-for="Date" class="form-control" placeholder="Enter Date" required />
+            </div>
+
+            <div class="form-group">
+                <label>Day</label>
+                <input type="text" asp-for="Day" class="form-control" placeholder="Enter Day" required />
+            </div>
+
+            <div class="form-group">
+                <label>Occasion</label>
+                <input type="text" asp-for="Occasion" class="form-control" placeholder="Enter Occasion" required />
+            </div>
+
+            <button type="submit" class="btn btn-success">Add Holiday</button>
+        </form>
+    </div>
+}

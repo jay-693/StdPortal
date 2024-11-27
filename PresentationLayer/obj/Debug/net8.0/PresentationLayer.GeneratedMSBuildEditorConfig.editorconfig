@@ -1,0 +1,351 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PresentationLayer
+build_property.RootNamespace = PresentationLayer
+build_property.ProjectDir = C:\Users\Vijay Vattikuti\source\repos\StudentPortal\PresentationLayer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Vijay Vattikuti\source\repos\StudentPortal\PresentationLayer
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/AcademicAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxBY2FkZW1pY0FkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/AddHoliday.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxBZGRIb2xpZGF5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/BtechAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxCdGVjaEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/ClassAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxDbGFzc0FkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/EditHoliday.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxFZGl0SG9saWRheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/HolidayAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxIb2xpZGF5QWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AcademicAdmin/MbaAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNBZG1pblxNYmFBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AddExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRkRXhhbVRpbWVUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AddLabInternal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRkTGFiSW50ZXJuYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AddSemwiseGrades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRkU2Vtd2lzZUdyYWRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AddSupplyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRkU3VwcGx5RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AdminExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRtaW5FeGFtVGltZVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AdminLab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRtaW5MYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AdminSemWiseGradesDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRtaW5TZW1XaXNlR3JhZGVzRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/AdminSupply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcQWRtaW5TdXBwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/EditExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcRWRpdEV4YW1UaW1lVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/EditLabInternal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcRWRpdExhYkludGVybmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/EditSemwiseGrades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcRWRpdFNlbXdpc2VHcmFkZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/EditSupplyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcRWRpdFN1cHBseURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/RemoveExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcUmVtb3ZlRXhhbVRpbWVUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/RemoveLabInternal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcUmVtb3ZlTGFiSW50ZXJuYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/RemoveSemwiseGrades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcUmVtb3ZlU2Vtd2lzZUdyYWRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminExaminationCell/RemoveSupplyDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FeGFtaW5hdGlvbkNlbGxcUmVtb3ZlU3VwcGx5RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/AddStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEFkZFN0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/BooksStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEJvb2tzU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/BorrowedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEJvcnJvd2VkQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/EditStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XEVkaXRTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XFJlbW92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/AdminLibrary/RemoveStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MaWJyYXJ5XFJlbW92ZVN0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Course/Btech.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEJ0ZWNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Course/GetBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEdldEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Course/GetStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEdldFN0YXR1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Course/Mba.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXE1iYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/ExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXEV4YW1UaW1lVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/ExamTimeTablePdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXEV4YW1UaW1lVGFibGVQZGYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/LabInternalMarks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXExhYkludGVybmFsTWFya3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/LabInternalMarksPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXExhYkludGVybmFsTWFya3NQZGYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/RegularFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXFJlZ3VsYXJGZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/SemwiseAttendence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXFNlbXdpc2VBdHRlbmRlbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/SemwiseAttendencePdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXFNlbXdpc2VBdHRlbmRlbmNlUGRmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/SemwiseGradesDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXFNlbXdpc2VHcmFkZXNEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/ExaminationCell/SemwiseGradesDetailsPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25DZWxsXFNlbXdpc2VHcmFkZXNEZXRhaWxzUGRmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/AcademicCalender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2FkZW1pY0NhbGVuZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/ClassTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGFzc1RpbWVUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/HallTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIYWxsVGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/HolidayList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb2xpZGF5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/HolidayPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb2xpZGF5UGRmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/LandingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYW5kaW5nUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/LibraryFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaWJyYXJ5RmVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/PenaltyFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZW5hbHR5RmVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/RedirectToHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWRpcmVjdFRvSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/SupplyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdXBwbHlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/SupplyPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdXBwbHlQZGYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/TransportFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFuc3BvcnRGZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Home/TuitionFee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUdWl0aW9uRmVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkV4YW1UaW1lVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminHomePageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkhvbWVQYWdlTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminLabInternal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxhYkludGVybmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminSemwiseGradesDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblNlbXdpc2VHcmFkZXNEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_AdminSupply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblN1cHBseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_DisplayAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaXNwbGF5QWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_DisplayUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaXNwbGF5VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_DueSubjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EdWVTdWJqZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_ExamTimeTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FeGFtVGltZVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_LabInternalMarks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYWJJbnRlcm5hbE1hcmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_SemwiseAttendence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW13aXNlQXR0ZW5kZW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_SemwiseGradesDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW13aXNlR3JhZGVzRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_StudentHomePageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50SG9tZVBhZ2VMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_StudentLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/SignUp/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXFNpZ25Jbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/SignUp/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXFNpZ25VcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vijay Vattikuti/source/repos/StudentPortal/PresentationLayer/Views/Shared/_LandingPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5kaW5nUGFnZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ednrnwcc5a

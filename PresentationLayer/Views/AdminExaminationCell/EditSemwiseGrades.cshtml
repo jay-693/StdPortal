@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model StudentPortal.Models.SemwiseGradesDetails
+
+@section editgrades {
+    <style>
+        /* Container for form and heading */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            display: block;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .control-label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+            margin-left: -10px;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+                outline: none;
+            }
+
+        .btn {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .btn-secondary {
+            background-color: red;
+            border-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+
+        .text-danger {
+            color: red;
+            font-size: 14px;
+        }
+
+        .back-button-container {
+            position: absolute;
+            top: 30px;
+            right: -200px;
+            ;
+        }
+
+        .btn-back {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+            .btn-back:hover {
+                background-color: darkred;
+            }
+    </style>
+
+    <!-- Container for the form and the heading -->
+    <div class="form-container">
+        <div class="back-button-container">
+            <a href="@Url.Action("AdminExamTimeTable", "AdminExaminationCell")" class="btn-back">Back</a>
+        </div>
+        <h2>Edit Grade</h2>
+
+        <form asp-controller="AdminExaminationCell" asp-action="EditSemwiseGrades" method="post" class="form-horizontal">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label">Student ID</label>
+                <input asp-for="StudentId" class="form-control" placeholder="Enter Student ID" />
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Sno" class="control-label">SNO</label>
+                <input asp-for="Sno" class="form-control" placeholder="Enter Serial Number" />
+                <span asp-validation-for="Sno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SubjectCodeLabCode" class="control-label">Subject Code/Lab Code</label>
+                <input asp-for="SubjectCodeLabCode" class="form-control" placeholder="Enter Code" />
+                <span asp-validation-for="SubjectCodeLabCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label">Subject Name/Lab Name</label>
+                <input asp-for="Subject" class="form-control" placeholder="Enter Subject or Lab Name" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MonthAndYear" class="control-label">Month & Year</label>
+                <input asp-for="MonthAndYear" class="form-control" placeholder="Enter Month & Year" />
+                <span asp-validation-for="MonthAndYear" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Grade" class="control-label">Final Grade</label>
+                <input asp-for="Grade" class="form-control" placeholder="Enter Grade" />
+                <span asp-validation-for="Grade" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Status" class="control-label">Status</label>
+                <input asp-for="Status" class="form-control" placeholder="Enter Status" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Semester" class="control-label">Semester</label>
+                <input asp-for="Semester" class="form-control" placeholder="Enter Semester" />
+                <span asp-validation-for="Semester" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" style="align-items:center;margin-left:120px;border-radius:10px;background-color:cornflowerblue">Save</button>
+                <a asp-action="AdminSemwiseGradesDetails" class="btn btn-secondary" style="text-decoration:none;border-radius:10px">Cancel</a>
+            </div>
+        </form>
+    </div>
+}

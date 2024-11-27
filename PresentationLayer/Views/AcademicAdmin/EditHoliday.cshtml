@@ -1,0 +1,94 @@
+﻿@model StudentPortal.Models.Holiday
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section editholiday{
+    <style>
+        .holiday-edit-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left; /* Ensure form labels are left-aligned */
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-left: -8px;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+                outline: none;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 90px;
+            padding: 10px;
+            font-size: 16px;
+            margin-left:90px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #004085;
+            }
+    </style>
+
+    <div class="holiday-edit-form">
+        <h2>Edit Holiday</h2>
+
+        @using (Html.BeginForm("EditHoliday", "AcademicAdmin", FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.Id)
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Month)
+                @Html.TextBoxFor(m => m.Month, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Date)
+                @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Day)
+                @Html.TextBoxFor(m => m.Day, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Occasion)
+                @Html.TextBoxFor(m => m.Occasion, new { @class = "form-control" })
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        }
+    </div>
+}

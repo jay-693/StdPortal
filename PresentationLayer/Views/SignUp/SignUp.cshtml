@@ -1,0 +1,53 @@
+﻿@model StudentPortal.Models.SignUp
+@{
+    Layout = "~/Views/Shared/_LandingPageLayout.cshtml";
+}
+
+@section Signup {
+    <div class="sign-up-container">
+        <div class="sign-up-box">
+            <h3>Welcome to College Name Student Portal</h3>
+            <img src="~/images/logo.png" alt="College" class="college-logo">
+
+            <!-- Form to handle SignUp model submission -->
+            <form asp-controller="SignUp" asp-action="Create" method="post">
+                <div class="input-group">
+                    <label asp-for="StudentId">
+                        <i class="fas fa-user"></i> Student ID*
+                    </label>
+                    <input asp-for="StudentId" class="form-control" required />
+                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="Username">
+                        <i class="fas fa-user"></i> Username*
+                    </label>
+                    <input asp-for="Username" class="form-control" required />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="Password">
+                        <i class="fas fa-lock"></i> Password*
+                    </label>
+                    <input asp-for="Password" type="password" class="form-control" required />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="ConfirmPassword">
+                        <i class="fas fa-lock"></i> Confirm Password*
+                    </label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" required />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <a style="text-decoration:none"><button type="submit" class="submit-btn">Sign Up</button></a>
+            </form>
+        </div>
+    </div>
+}
+ @section Scripts {
+    <!-- Include validation scripts for client-side validation -->
+    <partial name="_ValidationScriptsPartial" />
+} 

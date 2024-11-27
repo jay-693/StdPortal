@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "College Name Student Portal";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Landingstyle.css">
+    <link rel="stylesheet" href="~/css/LoginStyle.css">
+    <link rel="stylesheet" href="~/css/SignUpStyle.css">
+    <link rel="stylesheet" href="~/css/AcademicCalenderStyle.css">
+    <link rel="stylesheet" href="~/css/ClassTimeTableStyle.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="college-logo">
+               <a href="#"><img src="~/images/logo.png" alt="College Logo"></a> 
+            </div>
+            <span>College</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a class="sep" href="#"><b>Academics</b></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Class TimeTable</a></li>
+                        <li><a href="#">List Of Holidays</a></li>
+                        <li><a href="#">Semwise Attendance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="sep" href="#"><b>Examination Cell</b></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Exam Time Table</a></li>
+                        <li><a href="#">Internal Marks</a></li>
+                        <li><a href="#">Semwise Grades</a></li>
+                        <li><a href="#">Due Subjects</a></li>
+                        <li><a href="#">Hall Ticket Download</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="sep" href="#"><b>Courses</b></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">BTech Syllabus</a></li>
+                        <li><a href="#">MBA Syllabus</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="sep" href="#"><b>Library</b></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Borrowed Books</a></li>
+                        <li><a href="#">Books Status</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="sep" href="#"><b>Fee Structure</b></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Tution Fee</a></li>
+                        <li><a href="#">Hostel&Transportation Fee</a></li>
+                        <li><a href="#">Examination Fee</a></li>
+                        <li><a href="#">Library Fee</a></li>
+                        <li><a href="#">Penalty Fee</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a style="text-decoration:none" asp-controller="SignUp" asp-action="SignIn"><button class="sign-in">Sign In</button></a>
+            <a style="text-decoration:none" asp-controller="SignUp" asp-action="SignUp"><button class="sign-up">Sign Up</button></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        @RenderSection("Imagelogo", required:false)
+        @RenderSection("Signin", required:false)
+        @RenderSection("Signup", required:false)
+        @RenderSection("forgot", required: false)
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>About College</h3>
+                <ul>
+                    <li><a href="#">Future and current students</a></li>
+                    <li><a href="#">Academic programs</a></li>
+                    <li><a href="#">Research</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Library</h3>
+                <ul>
+                    <li><a href="#">Recreation</a></li>
+                    <li><a href="#">Varsity Sports</a></li>
+                    <li><a href="#">Alumni & Friends</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Resources for Current Students</a></li>
+                    <li><a href="#">Resources for Faculty & Staff</a></li>
+                    <li><a href="#">Bookstore</a></li>
+                    <li><a href="#">Campus Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Careers@College</a></li>
+                    <li><a href="#">Communications Office</a></li>
+                    <li><a href="#">Give Now</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><b>© 2024 NoCode College. All rights reserved.</b></p>
+            <div class="social-icons">
+                <a href="#"><img src="~/images/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="/images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="/images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿@{
+    var role = ViewContext.HttpContext.Session.GetString("Role");
+}
+@if (ViewBag.role == null)
+{
+    @role;
+}

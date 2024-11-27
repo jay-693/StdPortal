@@ -1,0 +1,245 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+@{
+    var username = ViewContext.HttpContext.Session.GetString("UserName");
+}
+@section Transport {
+    <title>College Payment Portal</title>
+    <head>
+        <style>
+            /* Basic reset */
+            .containeras {
+                max-width: 1000px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 20px;
+            }
+
+            .form-groupsd {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            .form-groupsd-inline {
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .form-groupsd-inline .form-groupsd {
+                    flex: 1;
+                    margin-right: 10px;
+                }
+
+                    .form-groupsd-inline .form-groupsd:last-child {
+                        margin-right: 0;
+                    }
+
+            .details-groupsas {
+                margin-bottom: 20px;
+            }
+
+                .details-groupsas h3 {
+                    color: #F7A9A9;
+                    margin-bottom: 10px;
+                }
+
+                .details-groupsas p {
+                    font-size: 1rem;
+                    margin-bottom: 8px;
+                }
+
+            .installment-options {
+                margin-bottom: 15px;
+            }
+
+                .installment-options label {
+                    margin-right: 20px;
+                }
+
+                .installment-options input[type="radio"] {
+                    margin-right: 5px;
+                }
+
+            .installment-amount {
+                margin-top: 10px;
+                font-size: 1rem;
+                color: #E437D2;
+            }
+
+            .button-clgfee {
+                width: 100%;
+                padding: 12px;
+                background-color: #F7A9A9;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+                .button-clgfee:hover {
+                    background-color: hotpink;
+                }
+
+            .info {
+                background-color: #F7D7D9;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-left: 5px solid #F7A9A9;
+            }
+
+                .info strong {
+                    color: #2c3e50;
+                }
+        </style>
+    </head>
+
+    <div class="content-wrapperpay" style="display: flex;flex-direction: column;align-items: center;margin-top: -400px;margin-left:-6vw;width: 40vw;height: 20vh;justify-content: space-evenly;">
+        <h1 Class="Pay1">Hostel & Transportation Fee</h1>
+        <p class="breadcrumb" style="flex-shrink: 0;color: #E437D2;font-size: 14px;margin-top: 5px;margin-left:-50px;padding: 0px 0px;">You are here: <a asp-controller="Home" asp-action="RedirectToHome" style="text-decoration:none;color:#E437D2;">Payments</a> >> Hostel & Transportation Fee</p>
+    </div>
+
+    <div class="containeras">
+        <h1>College Payment Portal</h1>
+
+        <div class="info">
+            <strong>Note:</strong> This page displays your current dues and payment options.
+        </div>
+
+        <!-- Student Information Section -->
+        <div class="details-groupsas">
+            <h3>Student Details</h3>
+            <p><strong>Student ID:</strong> @username</p>
+        </div>
+
+        <!-- Dues Section with Fee Selection -->
+        <div class="details-groupsas">
+            <h3>Select Fees to Include</h3>
+            <label>
+                <input type="checkbox" name="feeType" value="100000" class="fee-checkbox"> Hostel Fee: ₹100,000
+            </label><br>
+            <label>
+                <input type="checkbox" name="feeType" value="50000" class="fee-checkbox"> Transportation Fee: ₹50,000
+            </label>
+
+            <div class="installment-amount" id="total-dues">Total Dues: ₹0</div>
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="details-groupsas">
+            <h3>Payment Options</h3>
+            <p><strong>Payment Plan:</strong> Full Payment or Installments</p>
+
+            <!-- Installment Options -->
+            <div class="installment-options">
+                <label>
+                    <input type="radio" name="installment" value="3-months"> 3 Months
+                </label>
+                <label>
+                    <input type="radio" name="installment" value="6-months"> 6 Months
+                </label>
+                <label>
+                    <input type="radio" name="installment" value="custom"> Custom Amount
+                </label>
+            </div>
+
+            <!-- Custom Amount Field -->
+            <div class="form-group" id="custom-amount-group" style="display: none;">
+                <label for="custom-amount">Enter Custom Amount:</label>
+                <input type="number" id="custom-amount" name="customAmount" min="1" placeholder="Enter custom amount">
+            </div>
+
+            <!-- Installment Amount Message -->
+            <div id="installment-amount-message" class="installment-amount"></div>
+        </div>
+
+        <form action="#" method="POST">
+            <!-- Option to choose payment method -->
+            <div class="form-groupsd">
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" name="paymentMethod" required>
+                    <option value="">Select a payment method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Bank Transfer">Net Banking</option>
+                    <option value="PayPal">UPI Transfer</option>
+                </select>
+            </div>
+
+            <button class="button-clgfee" type="submit">Proceed</button>
+        </form>
+    </div>
+
+    <script>
+        const feeCheckboxes = document.querySelectorAll('.fee-checkbox');
+        const totalDuesDisplay = document.getElementById('total-dues');
+        const installmentRadios = document.querySelectorAll('input[name="installment"]');
+        const customAmountGroup = document.getElementById('custom-amount-group');
+        const customAmountInput = document.getElementById('custom-amount');
+        const installmentAmountMessage = document.getElementById('installment-amount-message');
+
+        function calculateTotalDues() {
+            let totalDues = 0;
+            feeCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    totalDues += parseInt(checkbox.value);
+                }
+            });
+            totalDuesDisplay.textContent = `Total Dues: ₹${totalDues}`;
+            return totalDues;
+        }
+
+        feeCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', calculateTotalDues);
+        });
+
+        installmentRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                let installmentAmount = 0;
+                const selectedFeeTotal = calculateTotalDues();
+
+                if (this.value === 'custom') {
+                    customAmountGroup.style.display = 'block';
+                    customAmountInput.value = '';
+                    installmentAmountMessage.textContent = '';
+                } else {
+                    customAmountGroup.style.display = 'none';
+
+                    if (this.value === '3-months') {
+                        installmentAmount = selectedFeeTotal / 3;
+                    } else if (this.value === '6-months') {
+                        installmentAmount = selectedFeeTotal / 6;
+                    }
+
+                    installmentAmountMessage.textContent = `You will need to pay: ₹${installmentAmount.toFixed(2)} per installment.`;
+                }
+            });
+        });
+    </script>
+}

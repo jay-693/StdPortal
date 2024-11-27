@@ -1,0 +1,197 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+@{
+    var username = ViewContext.HttpContext.Session.GetString("UserName");
+}
+@section newFee {
+    <title>College Payment Portal</title>
+    <head>
+        <style>
+            /* Basic reset */
+            .containeras {
+                max-width: 1000px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 20px;
+            }
+
+            .form-groupsd {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            .installment-options label {
+                margin-right: 20px;
+            }
+
+            .installment-options input[type="radio"] {
+                margin-right: 5px;
+            }
+
+            .installment-amount {
+                margin-top: 10px;
+                font-size: 1rem;
+                color: #E437D2;
+            }
+
+            .button-clgfee {
+                width: 100%;
+                padding: 12px;
+                background-color: #F7A9A9;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .details-groupsas h3 {
+                color: #F7A9A9;
+                margin-bottom: 10px;
+            }
+                .button-clgfee:hover {
+                    background-color: hotpink ;
+                }
+
+            .info {
+                background-color: #F7D7D9;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-left: 5px solid #F7A9A9;
+            }
+
+                .info strong {
+                    color: #2c3e50;
+                }
+        </style>
+    </head>
+
+    <div class="content-wrapperpay" style=" display: flex;flex-direction: column;align-items: center;margin-top: -400px;margin-left:-6vw;width: 40vw;height: 20vh;justify-content: space-evenly;">
+        <h1 class="pay5" style="margin-right: 150px;">Tuition Fee</h1>
+        <p class="breadcrumb" style="flex-shrink: 0;color: #E437D2;font-size: 14px;margin-top: 5px;margin-left:-50px;padding: 0px 0px;">You are here: <a asp-controller="Home" asp-action="RedirectToHome" style="text-decoration:none;color:#E437D2;">Payments</a>  >> Tuition Fee</p>
+    </div>
+
+    <div class="containeras">
+        <h1>College Payment Portal</h1>
+        <div class="info">
+            <strong>Note:</strong> This page displays your current dues and payment options.
+        </div>
+
+        <!-- Student Information Section -->
+        <div class="details-groupsas">
+            <h3>Student Details</h3>
+            <p><strong>Student ID:</strong> @username</p>
+        </div>
+
+        <!-- Dues Section -->
+        <div class="details-groupsas">
+            <h3>Outstanding Dues</h3>
+            <p><strong>Tuition Fee:</strong> 65,000</p>
+            <p><strong>JNTU Fee:</strong> 5,500</p>
+            <p><strong>Total Dues:</strong> 70,500</p> <!-- Total Dues -->
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="details-groupsas">
+            <h3>Payment Options</h3>
+            <p><strong>Payment Plan:</strong> Full Payment or Installments</p>
+
+            <!-- Installment Options -->
+            <div class="installment-options">
+                <label>
+                    <input type="radio" name="installment" value="3-months"> 3 Months
+                </label>
+                <label>
+                    <input type="radio" name="installment" value="6-months"> 6 Months
+                </label>
+                <label>
+                    <input type="radio" name="installment" value="custom"> Custom Amount
+                </label>
+            </div>
+
+            <!-- Custom Amount Field -->
+            <div class="form-group" id="custom-amount-group" style="display: none;">
+                <label for="custom-amount">Enter Custom Amount:</label>
+                <input type="number" id="custom-amount" name="customAmount" min="1" placeholder="Enter custom amount">
+            </div>
+
+            <!-- Installment Amount Message -->
+            <div id="installment-amount-message" class="installment-amount"></div>
+        </div>
+
+        <form action="#" method="POST">
+            <!-- Option to choose payment method -->
+            <div class="form-groupsd">
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" name="paymentMethod" required>
+                    <option value="">Select a payment method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Bank Transfer">Net Banking</option>
+                    <option value="PayPal">UPI Transfer</option>
+                </select>
+            </div>
+
+            <button class="button-clgfee" type="submit">Proceed</button>
+        </form>
+    </div>
+
+    <script>
+        const totalDues = 70500; // Total dues amount
+        const installmentRadios = document.querySelectorAll('input[name="installment"]');
+        const customAmountGroup = document.getElementById('custom-amount-group');
+        const customAmountInput = document.getElementById('custom-amount');
+        const installmentAmountMessage = document.getElementById('installment-amount-message'); // Message element
+
+        installmentRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                let installmentAmount = 0;
+
+                if (this.value === 'custom') {
+                    // Show custom amount input if "Custom Amount" is selected
+                    customAmountGroup.style.display = 'block';
+                    customAmountInput.value = '';
+                    installmentAmountMessage.textContent = ''; // Clear the message when custom is selected
+                } else {
+                    // Hide custom amount input if "3-months" or "6-months" is selected
+                    customAmountGroup.style.display = 'none';
+
+                    // Calculate the installment amount based on the selection
+                    if (this.value === '3-months') {
+                        installmentAmount = totalDues / 3;
+                    } else if (this.value === '6-months') {
+                        installmentAmount = totalDues / 6;
+                    }
+
+                    // Display the calculated installment amount below the radio buttons
+                    installmentAmountMessage.textContent = `You will need to pay: ₹${installmentAmount.toFixed(2)} per installment.`;
+                }
+            });
+        });
+    </script>
+}

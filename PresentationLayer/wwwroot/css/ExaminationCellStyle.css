@@ -1,0 +1,77 @@
+﻿.exam-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-left: -120px;
+    margin-top: -120px;
+    width: 35vw;
+    height: 65vh;
+    justify-content:space-evenly;
+}
+
+.exambread {
+    flex-shrink: 0;
+    color: #E437D2;
+    font-size: 14px;
+    padding: 0px 0px;
+    text-align: left;
+    margin-top:-30px ;
+    width: 34vw;
+}
+
+.exam-wrapper h1 {
+    text-align: left;
+    margin: 0px;
+    width:34vw;
+}
+
+.exam-time-table{
+    display:flex;
+    width:50vw;  
+}
+.exam-page{
+    display:flex;
+}
+
+
+.sem-list1 {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.table1 {
+    width: 40%;
+    border-collapse: collapse;
+    margin-right:50%;
+}
+
+    .table1 th, .table1 td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .table1 th {
+        background-color: #eee;
+    }
+.examdownload-btn {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-right:65%;
+    margin-top:-15%;
+}
+

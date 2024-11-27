@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model ExamTimeTable
+
+@section removeexamtime {
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .confirmation-box {
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .info-group {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .form-group1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+                border-color: #bd2130;
+            }
+
+        .btn-secondary {
+            background-color: cornflowerblue;
+            border-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+
+    </style>
+    <div class="confirmation-box">
+        <h3>Are you sure you want to remove this record?</h3>
+        <div class="info-group">
+            <strong>Student ID:</strong> @Model.StudentId
+        </div>
+        <div class="info-group">
+            <strong>S.No:</strong> @Model.Sno
+        </div>
+        <div class="info-group">
+            <strong>Subject Name:</strong> @Model.Subject
+        </div>
+        <div class="info-group">
+            <strong>Subject Code/Lab Code:</strong> @Model.SubjectCode
+        </div>
+        <div class="info-group">
+            <strong>ExamDate:</strong> @Model.ExamDate
+        </div>
+        <div class="info-group">
+            <strong>Timings:</strong> @Model.Timing
+        </div>
+        <form asp-action="RemoveExamTimeTableConfirmed" asp-route-id="@Model.Id" method="post" class="form-horizontal">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group1">
+                <button type="submit" class="btn btn-danger">Remove</button>
+                <a asp-action="AdminExamTimeTable" class="btn btn-secondary" style="text-decoration:none;border-radius:10px">Cancel</a>
+            </div>
+        </form>
+    </div>
+ }

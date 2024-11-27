@@ -1,0 +1,176 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+@{
+    var username = ViewContext.HttpContext.Session.GetString("UserName");
+}
+@section Library{
+<title>College Payment Portal</title>
+<head>
+<style>
+        /* Basic reset */
+         .containeras {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+ 
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+ 
+        .form-groupsd {
+            margin-bottom: 15px;
+        }
+ 
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+ 
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+ 
+        .form-groupsd-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+ 
+        .form-groupsd-inline .form-groupsd {
+            flex: 1;
+            margin-right: 10px;
+        }
+ 
+        .form-groupsd-inline .form-groupsd:last-child {
+            margin-right: 0;
+        }
+ 
+        .details-groupsas {
+            margin-bottom: 20px;
+        }
+ 
+        .details-groupsas h3 {
+                    color: #F7A9A9;
+            margin-bottom: 10px;
+        }
+ 
+        .details-groupsas p {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+ 
+        .installment-options {
+            margin-bottom: 15px;
+        }
+ 
+        .installment-options label {
+            margin-right: 20px;
+        }
+ 
+        .installment-options input[type="radio"] {
+            margin-right: 5px;
+        }
+ 
+        .button-clgfee {
+            width: 100%;
+            padding: 12px;
+                background-color: #F7A9A9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+ 
+        .button-clgfee:hover {
+                    background-color: hotpink;
+        }
+ 
+        .info {
+                background-color: #F7D7D9;
+            padding: 10px;
+            margin-bottom: 15px;
+                border-left: 5px solid #F7A9A9;
+        }
+ 
+        .info strong {
+            color: #2c3e50;
+        }
+ 
+        
+</style>
+</head>
+ 
+    <div class="content-wrapperpay" style=" display: flex;flex-direction: column;align-items: center;margin-top: -400px;margin-left:-6vw;width: 40vw;height: 20vh;justify-content: space-evenly;">
+<h1 Class="pay2" style="margin-right: 120px;">Library Fee</h1>
+        <p class="breadcrumb" style="flex-shrink: 0;color: #E437D2;font-size: 14px;margin-top: 5px;margin-left:-50px;padding: 0px 0px;">You are here: <a asp-controller="Home" asp-action="RedirectToHome" style="text-decoration:none;color:#E437D2;">Payments</a>  >> Library Fee</p>
+</div>
+<div class="containeras">
+<h1>College Payment Portal</h1>
+ 
+        <div class="info">
+<strong>Note:</strong> This page displays your current dues.
+</div>
+ 
+        <!-- Student Information Section -->
+<div class="details-groupsas">
+<h3>Student Details</h3>
+<p><strong>Student ID:</strong>@username</p>
+</div>
+ 
+        <!-- Dues Section -->
+<div class="details-groupsas">
+<h3>Outstanding Dues</h3>
+<p><strong>Library Fee:</strong> 20,000</p>
+<p><strong>Total Dues:</strong> 20,000</p>
+</div>
+
+ 
+        <form action="#" method="POST">
+<!-- Option to choose payment method -->
+<div class="form-groupsd">
+<label for="payment-method">Choose Payment Method:</label>
+<select id="payment-method" name="paymentMethod" required>
+<option value="">Select a payment method</option>
+<option value="Credit Card">Credit Card</option>
+<option value="Bank Transfer">Net Banking</option>
+<option value="PayPal">UPI Transfer</option>
+</select>
+</div>
+ 
+            <button class="button-clgfee" type="submit">Proceed</button>
+</form>
+</div>
+ 
+    <script>
+        // Show custom amount input if 'Custom Amount' is selected
+        const installmentRadios = document.querySelectorAll('input[name="installment"]');
+        const customAmountGroup = document.getElementById('custom-amount-group');
+ 
+        installmentRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                if (this.value === 'custom') {
+                    customAmountGroup.style.display = 'block';
+                } else {
+                    customAmountGroup.style.display = 'none';
+                }
+            });
+        });
+</script>
+ 
+}
+

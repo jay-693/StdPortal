@@ -1,0 +1,323 @@
+﻿/* General Styles */
+body {
+/*    background-image: url('../images/book-with-green-board-background.jpg');
+*/    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo .college-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+    nav ul li {
+        position: relative;
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 13px;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+/* Dropdown container */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    top: 100%; /* Position it below the Academics link */
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown .sep:hover {
+    background-color: #3F98BE;
+    border-radius: 20px;
+}
+.dropdown a:hover {
+    background-color: #3F98BE;
+}
+
+.dropdown-content li {
+    display: block;
+    width: 100%;
+}
+
+    .dropdown-content li a {
+        padding: 10px 15px;
+        text-align: left;
+        color: #000;
+        background-color: white;
+        display: block;
+    }
+
+        .dropdown-content li a:hover {
+            background-color: #3F98BE; 
+        }
+
+/* Show the dropdown when hovering over the parent item */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+    .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        text-decoration:none;
+    }
+        .auth-buttons a button:hover {
+            background-color: #808080;
+            text-decoration-color: white;
+        }
+.sign-in {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+.sign-in:hover{
+    background-color: #808080;
+    text-decoration-color: white;
+}
+.sign-up {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 10px;
+}
+.sign-up:hover{
+    background-color: #808080;
+    text-decoration-color: white;
+}
+
+/* Welcome Section with Flexbox */
+.welcome-section {
+    /*background-image:url('../images/book-with-green-board-background.jpg');
+    background-size:100% 100%;*/
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-logo {
+    flex: 1;
+    text-align: left;
+    margin-left: 70px
+}
+
+    .text-logo h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+.college-logo-large img {
+    display:flex;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.portal-image {
+    flex: 1.5;
+    text-align: right;
+}
+
+    .portal-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/* Footer Styles */
+footer {
+/*    background-color: #9fbf8d;
+*/  background-color:white;
+    padding: 20px;
+    color: black;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Flex basis with a min-width */
+    margin-bottom: 20px;
+}
+
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+            .footer-column ul li a {
+                font-weight:bold;
+                text-decoration: none;
+                color: white;
+            }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
+    }
+
+    .text-logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .portal-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .text-logo h1 {
+        font-size: 24px;
+    }
+
+    .college-logo-large img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .auth-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+        nav ul li {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-section {
+        padding: 10px;
+    }
+
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-logo h1 {
+        font-size: 20px;
+    }
+
+    .college-logo-large img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+}

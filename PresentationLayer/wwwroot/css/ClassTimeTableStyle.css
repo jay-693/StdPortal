@@ -1,0 +1,114 @@
+﻿.holiday-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: -30px;
+    margin-top: -50px;
+    padding-top: 20px;
+    width: 120vw;
+    height: 55vh auto;
+}
+
+.bread {
+    flex-shrink: 0;
+    color: #E437D2;
+    font-size: 14px;
+    margin-top: -10px;
+    padding: 0px 0px;
+}
+
+.pagination {
+    float: right; /* Align the pagination to the right side of the page */
+    display: flex;
+    gap: 10px; /* Adds space between the pagination buttons */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-left:900px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0;
+    text-decoration: none; /* Removes underline */
+    font-size: 14px;
+}
+
+.pagination-arrow {
+    font-size: 18px; 
+    width: 40px;
+    height: 40px;
+    line-height: 40px; 
+}
+
+.pagination-text {
+    width: auto;
+    padding: 0 10px; /* Adds horizontal padding for wider text */
+}
+
+.btn-primary.pagination-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary.pagination-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.pagination-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover for primary */
+}
+
+.pagination-btn:active {
+    background-color: #004080; /* Even darker blue when active */
+}
+
+.pagination-btn.active {
+    background-color: #28a745; /* Different color for the active page */
+    color: white;
+    border-color: #28a745; /* Ensure the border matches the active color */
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus {
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+.download-btn-holy {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.download-btn-holy:hover {
+        background-color: cornflowerblue;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+/*  background-color: rgb(255,255,255,0.5);*/
+    background: rgb(0,0,0,0.5);
+    background-color: beige;
+}
+
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #eee;
+    }

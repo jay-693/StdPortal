@@ -1,0 +1,26 @@
+﻿@model IEnumerable<StudentPortal.Models.Supply>
+
+@if (Model != null && Model.Any())
+{
+    <table class="TablePartial2">
+        <thead>
+            <tr>
+                <th>SNO</th>
+                <th>Subject Name/Lab Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exam in Model)
+            {
+                <tr>
+                    <td>@exam.Sno</td>
+                    <td>@exam.SubjectName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Not yet appeared for this semester or results not yet released.</p>
+}

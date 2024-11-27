@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+@section supply {
+    <div class="exam-page">
+        <div class="exam-wrapper">
+            <h1>Due Subjects</h1>
+            <p class="exambread">You are here: <a asp-controller="Home" asp-action="RedirectToHome" style="text-decoration:none;color:#E437D2">ExaminationCell</a> >> Due Subjects</p>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Select the Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="sem-list1">
+                                <label for="sem">Sem :</label>
+                                <select id="sem">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">I SEM</option>
+                                    <option value="2">II SEM</option>
+                                    <option value="3">III SEM</option>
+                                    <option value="4">IV SEM</option>
+                                    <option value="5">V SEM</option>
+                                    <option value="6">VI SEM</option>
+                                    <option value="7">VII SEM</option>
+                                    <option value="8">VIII SEM</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <button class="examdownload-btn" onclick="downloadexamPDF()">Download</button>
+        </div>
+        <div class="exam-time-table"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // The JavaScript function is included here
+        $(document).ready(function () {
+            $('#sem').change(function () {
+                var selectedSem = $(this).val();
+
+                $.ajax({
+                    url: '/Home/GetSupply',
+                    type: 'POST',
+                    data: { semester: selectedSem },
+                    success: function (data) {
+                        $('.exam-time-table').html(data);
+                    },
+                    error: function () {
+                        alert('Error fetching data.');
+                    }
+                });
+            });
+        });
+
+        function downloadexamPDF() {
+            // Code for downloading the exam timetable as PDF can go here
+
+            var selectedSem = $('#sem').val();
+
+            // Redirect to the controller action that generates the PDF
+            window.location.href = '/Home/DownloadSupply?semester=' + selectedSem;
+        }
+    </script>
+}

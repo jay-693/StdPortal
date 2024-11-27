@@ -1,0 +1,30 @@
+﻿@model IEnumerable<StudentPortal.Models.LabInternalMarks>
+
+@if (Model != null && Model.Any())
+{
+    <table class="TablePartial1">
+        <thead>
+            <tr>
+                <th>SNO</th>
+                <th>Subject Code/Lab Code</th>
+                <th>Subject Name/Lab Name</th>
+                <th>Mid Marks(30)/Lab InternalMarks(40)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exam in Model)
+            {
+                <tr>
+                    <td>@exam.Sno</td>
+                    <td>@exam.Code</td>
+                    <td>@exam.Name</td>
+                    <td>@exam.Marks</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Internal Marks not yet released for this semester.</p>
+}

@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model IEnumerable<StudentPortal.Models.Holiday>
+
+@section holidayadmin {
+    <div class="holiday-wrapper">
+        <h1>List Of Holidays</h1>
+        <p class="bread">You are here: <a asp-controller="Home" asp-action="LandingPage" style="text-decoration:none;color:#E437D2">Academics</a> >> List Of Holidays</p>
+        <center><h3>List of holidays 2024-2025</h3></center>
+
+        <!-- Add New Holiday Button -->
+        <a href="@Url.Action("AddHoliday", "AcademicAdmin")" class="btn btn-success" style="margin-bottom: 20px;text-decoration:none;color:darkorange">Add Holiday</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Occasion</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var holiday in Model)
+                    {
+                        <tr>
+                            <td>@holiday.Month</td>
+                            <td>@holiday.Date</td>
+                            <td>@holiday.Day</td>
+                            <td>@holiday.Occasion</td>
+                            <td>
+                                <a href="@Url.Action("EditHoliday", new { id = holiday.Id })" class="btn btn-warning" style="text-decoration:none;color:darkorange;margin-left:6px;">Edit</a>
+                                <a href="@Url.Action("DeleteHoliday", new { id = holiday.Id })" class="btn btn-danger" style="text-decoration:none;color:darkorange">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center">No holidays available.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+
+        <!-- Pagination Links -->
+        <div class="pagination" style="float:right; display:flex; gap:10px;">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("HolidayAdmin", new { pageNumber = ViewBag.CurrentPage - 1 })"
+                   class="btn btn-secondary pagination-btn pagination-arrow">
+                    &lt; <!-- Left Arrow ( < ) -->
+                </a>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="@Url.Action("HolidayAdmin", new { pageNumber = i })"
+                   class="btn btn-primary pagination-btn @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("HolidayAdmin", new { pageNumber = ViewBag.CurrentPage + 1 })"
+                   class="btn btn-secondary pagination-btn pagination-arrow">
+                    &gt; <!-- Right Arrow ( > ) -->
+                </a>
+            }
+        </div>
+    </div>
+}

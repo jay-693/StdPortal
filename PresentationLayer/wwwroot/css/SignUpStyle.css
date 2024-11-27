@@ -1,0 +1,262 @@
+/* Global Styles */
+body {
+/*    background-image: url('../images/book-with-green-board-background.jpg');
+*/    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+     /* Light pink background */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo .college-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 13px;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+.auth-buttons {
+    display: flex;
+}
+
+.profile{
+    display:flex;
+}
+.profile img{
+    width:32px;
+    height:32px;
+}
+.profile a button{
+    margin-left:10px;
+}
+    .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+.sign-in {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.sign-up {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 10px;
+}
+
+main {
+    background-image: url('../images/Background.jpg');
+    background-size:100% 100%;
+    /*background-color: #f7d9d9;*/ /* Pink background */
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px); /* Full-screen height excluding the header/footer */
+}
+
+.sign-up-container {
+    background-color:#fff;
+    margin-top: 5px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.sign-up-box h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sign-up-box .college-logo {
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+    .input-group label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        color: #000;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+.submit-btn {
+    background-color: #f9b324;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    /*    background-color: #9fbf8d;
+*/  background-color: white;
+    padding: 20px;
+    color: black;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Flex basis with a min-width */
+    margin-bottom: 20px;
+}
+
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+            .footer-column ul li a {
+                text-decoration: none;
+                color: black;
+                font-size:13px;
+            }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .auth-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 10px;
+    }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<StudentPortal.Models.ExamTimeTable>
+
+@if (Model != null && Model.Any())
+{
+    <table class="TablePartial">
+        <thead>
+            <tr>
+                <th>SNO</th>
+                <th>Subject Code</th>
+                <th>Subject</th>
+                <th>Exam Date</th>
+                <th>Timings</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exam in Model)
+            {
+                <tr>
+                    <td>@exam.Sno</td>
+                    <td>@exam.SubjectCode</td>
+                    <td>@exam.Subject</td>
+                    <td>@exam.ExamDate.ToString("yyyy-MM-dd")</td>
+                    <td>@exam.Timing</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No exam timetable released for this semester.</p>
+}

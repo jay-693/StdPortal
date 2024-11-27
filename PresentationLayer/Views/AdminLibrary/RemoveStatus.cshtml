@@ -1,0 +1,83 @@
+﻿@model BooksStatus
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section removebookstatus {
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .confirmation-details {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-danger {
+            background-color: red;
+            border-color: red;
+        }
+
+            .btn-danger:hover {
+                background-color: darkred;
+                border-color: darkred;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+    </style>
+
+    <div class="form-container">
+        <h2>Remove Book Status</h2>
+
+        <div class="confirmation-details">
+            <h3>Are you sure you want to remove this book status?</h3>
+            <div>
+                <strong>S.No:</strong> @Model.Sno
+            </div>
+            <div>
+                <strong>Book Name:</strong> @Model.BookName
+            </div>
+            <div>
+                <strong>Status:</strong> @Model.Status
+            </div>
+            <div>
+                <strong>Penalty:</strong> @Model.Penalty
+            </div>
+        </div>
+
+        <form asp-action="RemoveStatusConfirmed" asp-route-id="@Model.Id" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Remove</button>
+                <a asp-action="BooksStatus" class="btn btn-secondary" style="text-decoration:none;border-radius:20px;">Cancel</a>
+            </div>
+        </form>
+    </div>
+}

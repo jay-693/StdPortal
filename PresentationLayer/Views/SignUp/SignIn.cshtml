@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingPageLayout.cshtml";
+}
+@section Signin {
+    <div class="login-container">
+        <h3>Welcome to College Name Student Portal</h3>
+        <form class="login-form" asp-controller="SignUp" asp-action="Login" method="post">
+            <div class="login-as">
+                <p>
+                    Login as*:
+                    <input type="radio" id="admin" name="loginAs" value="Admin">
+                    <label for="admin">Admin</label>
+                    <input type="radio" id="student" name="loginAs" value="Student" checked>
+                    <label for="student">Student</label>
+                </p>
+            </div>
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Username*" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password*" required>
+            </div>
+            <a asp-controller="Home" asp-action="ForgotPassword" class="forgot-password">Forgot Password?</a><br>
+            <a style="text-decoration:none"><button type="submit">Login</button></a>
+        </form>
+    </div>
+}

@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model IEnumerable<StudentPortal.Models.Supply>
+@section adminsupply {
+
+    <style>
+        .exam-wrapperad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: -120px;
+            margin-top: -120px;
+            width: 35vw;
+            height: 65vh;
+            justify-content: space-evenly;
+        }
+
+        .exambreadad {
+            flex-shrink: 0;
+            color: #E437D2;
+            font-size: 14px;
+            padding: 0px 0px;
+            text-align: left;
+            margin-top: -10px;
+            width: 34vw;
+        }
+
+        .exam-wrapperad h1 {
+            text-align: left;
+            margin: 0px;
+            width: 34vw;
+        }
+
+        .exam-time-tablead {
+            display: flex;
+            width: 50vw;
+        }
+
+        .exam-pagead {
+            display: flex;
+        }
+
+
+        .sem-list1ad {
+            display: flex;
+            align-items: center;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        .table1ad {
+            width: 40%;
+            border-collapse: collapse;
+            margin-right: 50%;
+        }
+
+            .table1ad th, .table1ad td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .table1ad th {
+                background-color: #eee;
+            }
+
+        .examdownload-btn {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-right: 65%;
+            margin-top: -15%;
+        }
+
+    </style>
+    <div class="exam-pagead">
+        <div class="exam-wrapperad">
+            <h1>Due Subjects</h1>
+            <p class="exambreadad">You are here: <a asp-controller="Home" asp-action="LandingPage" style="text-decoration:none;color:#E437D2">ExaminationCell</a>  >> Due Subjects</p>
+            <table class="table1ad">
+                <thead>
+                    <tr>
+                        <th>Select the Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="sem-list1ad">
+                                <label for="sem">Sem :</label>
+                                <select id="sem">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">I SEM</option>
+                                    <option value="2">II SEM</option>
+                                    <option value="3">III SEM</option>
+                                    <option value="4">IV SEM</option>
+                                    <option value="5">V SEM</option>
+                                    <option value="6">VI SEM</option>
+                                    <option value="7">VII SEM</option>
+                                    <option value="8">VIII SEM</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><br>
+
+            <!-- Add button -->
+            <button class="btn-add" onclick="openAddForm()" style="margin-Left:-250px;padding:15px;border-radius:15px;background-color:coral;">Add</button>
+            <br>
+
+        </div>
+
+        <!-- This div will be populated with the grades table from the database -->
+        <div class="exam-time-tablead"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Function to fetch sem-wise grades dynamically
+        $(document).ready(function () {
+            $('#sem').change(function () {
+                var selectedSem = $(this).val();
+
+                $.ajax({
+                    url: '/AdminExaminationCell/GetSupply',
+                    type: 'POST',
+                    data: { semester: selectedSem },
+                    success: function (data) {
+                        // Populate the .exam-time-table div with the data from the server
+                        $('.exam-time-tablead').html(data);
+                    },
+                    error: function () {
+                        alert('Error fetching data.');
+                    }
+                });
+            });
+        });
+
+        // Open form for adding a new record
+        function openAddForm() {
+            window.location.href = '/AdminExaminationCell/AddSupplyDetails';
+        }
+
+        // Edit record
+        function editRecord(id) {
+            window.location.href = '/AdminExaminationCell/EditSupplyDetails/' + id;
+        }
+
+        // Remove record
+        function removeRecord(id) {
+            window.location.href = '/AdminExaminationCell/RemoveSupplyDetails/' + id;
+        }
+    </script>
+}

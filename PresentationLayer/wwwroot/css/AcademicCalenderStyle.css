@@ -1,0 +1,141 @@
+﻿.content-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -500px;
+    margin-top: 0;
+    width: 35vw;
+    height: 90vh;
+}
+
+.breadcrumb1 {
+    flex-shrink: 0;
+    color: #E437D2;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0px 0px;
+    margin-left: -380px;
+}
+
+.content-wrapper1 h1 {
+    text-align: left;
+    margin: 0px;
+    margin-left: -380px;
+}
+.container1 {
+    margin-top:unset;
+    padding: 20px;
+    background-color: #fdf2f2;
+    margin: 5px 5px;
+    width: 20vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.sem-list1{
+    display:flex;
+    align-items:center;
+}
+.super-container1{
+    display:flex;
+    width:50vw;
+}
+
+select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius:10px;
+}
+
+
+
+.download-btn1 {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.download-btn1:hover{
+    background-color:cornflowerblue;
+}
+.option{
+    border-radius:10px;
+}
+.pdf-viewer {
+    margin-right: 0;
+}
+
+
+/*----------*/
+.content-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:350px;
+    margin-top: 0;
+    width: 35vw;
+    height: 90vh;
+}
+
+.breadcrumb2 {
+    flex-shrink: 0;
+    color: #E437D2;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+    padding: 0px 0px;
+}
+
+.content-wrapper2 h1 {
+    text-align: left;
+    margin: 0px;
+    margin-left: -380px;
+}
+
+.container2 {
+    margin-top: unset;
+    padding: 20px;
+    background-color: #fdf2f2;
+    margin: 5px 5px;
+    width: 20vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sem-list2 {
+    display: flex;
+    align-items: center;
+}
+
+.super-container2 {
+    display: flex;
+    width: 50vw;
+}
+
+.download-btn2 {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+    .download-btn2:hover {
+        background-color: cornflowerblue;
+    }

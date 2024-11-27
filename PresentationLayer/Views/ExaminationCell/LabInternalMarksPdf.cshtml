@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<StudentPortal.Models.LabInternalMarks>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internal Marks List</title>
+    <style>
+        .TablePartial1 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .TablePartial1 th, .TablePartial1 td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .TablePartial1 th {
+                background-color: #f2f2f2;
+            }
+    </style>
+</head>
+<body>
+    <h1>Internal Marks</h1>
+    <p>Semester: @TempData["Semester"]</p>
+    @Html.Partial("_LabInternalMarks")
+</body>
+</html>

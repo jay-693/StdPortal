@@ -1,0 +1,42 @@
+﻿@model IEnumerable<StudentPortal.Models.SemwiseAttendence>
+
+@if (Model != null && Model.Any())
+{
+    <table class="TablePartial2" style="background-color: beige;">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>No of Presents</th>
+                <th>No of Absents</th>
+                <th>Total Working Days</th>
+                <th>Attendance (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var record in Model)
+            {
+                <tr>
+                    <td>@record.Month</td>
+                    <td>@record.NoOfPresents</td>
+                    <td>@record.NoOfAbsents</td>
+                    <td>@record.TotalWorkingDays</td>
+                    <td>@record.AttendancePercentage.ToString("F2")</td>
+                </tr>
+            }
+            <tr style="font-weight: bold;">
+                <td colspan="4">Average Attendance (%)</td>
+                <td>
+                    @{
+                        var averageAttendance = Model.Any(m => m.TotalWorkingDays > 0) ?
+                        Model.Where(m => m.TotalWorkingDays > 0).Average(m => m.AttendancePercentage) : 0;
+                    }
+                    @averageAttendance.ToString("F2")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Attendance not yet released for this semester.</p>
+}

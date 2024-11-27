@@ -1,0 +1,34 @@
+﻿@model IEnumerable<StudentPortal.Models.SemwiseGradesDetails>
+
+@if (Model != null && Model.Any())
+{
+    <table class="TablePartial2">
+        <thead>
+            <tr>
+                <th>SNO</th>
+                <th>Subject Code/Lab Code</th>
+                <th>Subject Name/Lab Name</th>
+                <th>Month&Year</th>
+                <th>Final Grade</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exam in Model)
+            {
+                <tr>
+                    <td>@exam.Sno</td>
+                    <td>@exam.SubjectCodeLabCode</td>
+                    <td>@exam.Subject</td>
+                    <td>@exam.MonthAndYear</td>
+                    <td>@exam.Grade</td>
+                    <td>@exam.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No Grades available for this semester.</p>
+}

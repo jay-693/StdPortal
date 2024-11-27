@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+@section academic {
+	<div class="content-wrapper1">
+		<h1>Academic Calendar</h1>
+		<p class="breadcrumb1">You are here: <a asp-controller="Home" asp-action="RedirectToHome" style="text-decoration:none;color:#E437D2;">Academics</a> >> Academic Calendar</p>
+		<div class="super-container1">
+			<div class="container1">
+				<div class="sem-list1">
+					<label for="sem">Sem :</label>
+					<select id="sem" onchange="showSemesterPdf()">
+						<option value="0">Select Semester</option>
+						<option value="1">I/IV I SEM</option>
+						<option value="2">I/IV II SEM</option>
+						<option value="3">II/IV I SEM</option>
+						<option value="4">II/IV II SEM</option>
+						<option value="5">III/IV I SEM</option>
+						<option value="6">III/IV II SEM</option>
+						<option value="7">IV/IV I SEM</option>
+						<option value="8">IV/IV II SEM</option>
+					</select>
+				</div>
+
+				<!-- Section to display the PDF based on the selected semester -->
+				<!-- Button to download the displayed PDF -->
+				<button id="download-btn1" class="download-btn1" style="margin-top: 20px;" onclick="downloadPDF()">Download</button>
+			</div>
+		</div>
+
+		<div id="pdf-viewer" class="pdf-viewer" style="margin-top: 20px;display:flex;width:50vw;margin-left:1000px;margin-top:-200px;">
+			<iframe id="pdf-frame" src="" width="100%" height="400px" style="border: none;display:flex">
+				Your browser doesn't support PDFs. Please download the PDF to view it: <a href="#">Download PDF</a>.
+			</iframe>
+		</div>
+	</div>
+
+	<script>
+		// JavaScript function to display the PDF for the selected semester
+		function showSemesterPdf() {
+			var selectedSem = document.getElementById("sem").value;
+			var pdfFrame = document.getElementById("pdf-frame");
+			var downloadBtn = document.getElementById("download-btn1");
+
+			if (selectedSem == 0) {
+				// No semester selected, clear the iframe and hide the download button
+				pdfFrame.src = '';
+				downloadBtn.style.display = 'none';
+				return;
+			}
+
+			// Update the iframe src to the selected semester's PDF URL
+			var pdfUrl = `/AcademicCalendar/ShowPdf?sem=${selectedSem}`;
+			pdfFrame.src = pdfUrl;
+
+			// Show the download button and set its href to download the PDF
+			downloadBtn.style.display = 'inline-block';
+			downloadBtn.setAttribute('data-sem', selectedSem); // Set data attribute to track selected semester
+		}
+
+		// JavaScript function to download the PDF for the selected semester
+		function downloadPDF() {
+			var selectedSem = document.getElementById("download-btn1").getAttribute('data-sem');
+			window.location.href = `/AcademicCalendar/DownloadPdf?sem=${selectedSem}`;
+		}
+	</script>
+}

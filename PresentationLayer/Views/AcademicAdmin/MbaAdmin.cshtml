@@ -1,0 +1,63 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section mbaadmin {
+	<div class="content-wrapper1">
+		<h1>MBA Syllabus</h1>
+		<p class="breadcrumb1">You are here: <a asp-controller="Home" asp-action="LandingPage" style="text-decoration:none;color:#E437D2">Courses</a> >> MBA Syllabus</p>
+
+		<div class="super-container1">
+			<div class="container1">
+				<div class="sem-list1">
+					<label for="sem">Sem :</label>
+					<select id="sem" onchange="showSemesterPdf()">
+						<option value="" disabled selected>Select Semester</option>
+						<option value="1">Marketing</option>
+						<option value="2">HRM</option>
+						<option value="3">Finance</option>
+						<option value="4">Consulting</option>
+						<option value="5">Business Analytics</option>
+					</select>
+				</div>
+
+				<!-- Update PDF form -->
+				<form id="uploadForm" enctype="multipart/form-data" method="post" action="@Url.Action("UpdateMbaPdf", "AcademicAdmin")" style="margin-top: 20px;">
+					<input type="file" name="pdfFile" id="pdfFile" style="display:none;" accept="application/pdf" />
+					<input type="hidden" id="selectedSemester" name="sem" />
+					<button type="button" class="btn btn-secondary" onclick="document.getElementById('pdfFile').click()">Upload</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="pdf-viewer" class="pdf-viewer1" style="margin-top: 20px;display:flex;width:50vw;margin-left:1000px;margin-top:-200px;">
+			<iframe id="pdf-frame" src="" width="100%" height="400px" style="border: none;display:flex">
+				Your browser doesn't support PDFs. Please download the PDF to view it: <a href="#">Download PDF</a>.
+			</iframe>
+		</div>
+	</div>
+
+	<script>
+		function showSemesterPdf() {
+			var selectedSem = document.getElementById("sem").value;
+			var pdfFrame = document.getElementById("pdf-frame");
+			var uploadSem = document.getElementById("selectedSemester"); // Set selected semester in hidden input
+
+			if (selectedSem == 0) {
+				pdfFrame.src = '';
+				return;
+			}
+
+			// Create a unique query string to prevent browser caching
+			var timestamp = new Date().getTime();
+
+			// Update iframe src to display the selected semester's PDF with a unique query string
+			var pdfUrl = `/AcademicAdmin/ShowMbaPdf?sem=${selectedSem}&t=${timestamp}`;
+			pdfFrame.src = pdfUrl;
+
+			// Set the selected semester in hidden field for uploading PDF
+			uploadSem.value = selectedSem;
+		}
+	</script>
+}
